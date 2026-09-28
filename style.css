@@ -99,3 +99,5 @@ footer{margin-top:2.5rem;padding-top:1.2rem;border-top:2px dashed var(--mint);co
   .about{display:block}
 }
 @media(max-width:780px){.bar{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.bar::-webkit-scrollbar{display:none}.bar a{white-space:nowrap;flex:none}}
+@media print{html{font-size:12px} .card{margin-bottom:.6rem} .entry{margin-bottom:.45rem} .chips-t{margin:.3rem 0 .2rem} .chips{margin-bottom:.2rem} .lang-row{display:inline-flex;gap:.4rem;margin:0 1.4rem .2rem 0} .lang-row span:last-child{font-size:.7rem}}
+@media print{.lang-row{align-items:baseline}}
