@@ -99,3 +99,14 @@ footer{margin-top:2.5rem;padding-top:1.2rem;border-top:2px dashed var(--mint);co
 @media(max-width:780px){.bar{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.bar::-webkit-scrollbar{display:none}.bar a{white-space:nowrap;flex:none}}
 @media print{html{font-size:12px} .card{margin-bottom:.6rem} .entry{margin-bottom:.45rem} .chips-t{margin:.3rem 0 .2rem} .chips{margin-bottom:.2rem} .lang-row{display:inline-flex;gap:.4rem;margin:0 1.4rem .2rem 0} .lang-row span:last-child{font-size:.7rem}}
 @media print{.lang-row{align-items:baseline}}
+svg{flex:none}
+.bar .logo svg{width:1.15em;height:1.15em;vertical-align:-.18em}
+h1 .heart svg{width:1em;height:1em}
+.quick .ic svg{width:1.15rem;height:1.15rem;color:var(--ink)}
+.btn svg,.cta svg{vertical-align:-.14em;margin-left:.25em}
+.meta svg{vertical-align:-.15em;margin-right:.35em}
+.entry-title svg{vertical-align:-.15em;color:var(--pink-deep);margin-right:.25rem}
+.sticky li svg{width:.85em;height:.85em;vertical-align:-.08em;margin-right:.35rem}
+.postal span svg{width:.8em;height:.8em;color:var(--pink-deep);vertical-align:-.05em}
+footer svg{color:var(--pink-mid);vertical-align:-.15em}
+.note a svg{vertical-align:-.12em;margin-left:.2em}
