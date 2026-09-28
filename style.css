@@ -4,9 +4,7 @@
   --mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace; --hand:'Caveat','Comic Sans MS',cursive;
   box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
 }
-@media (prefers-color-scheme: dark){
-  :root{--bg:#211826; --glass:rgba(255,255,255,.07); --line:#4A3346; --ink:#FDEFF5; --ink-soft:#CDB6C6; --pink:#5A3550; --pink-mid:#F5A3BD; --pink-deep:#FFB3CF; --mint:#2E6B63; --mint-deep:#8FE3D8; --sun:#5A4F2A}
-}
+
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:5rem}
 body{margin:0;color:var(--ink);font-family:'Nunito',system-ui,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;
@@ -60,13 +58,13 @@ ul{margin:.3rem 0 .6rem;padding-left:1.2rem} li{margin-bottom:.35rem} li::marker
 .entry-head{display:flex;justify-content:space-between;align-items:baseline;gap:.4rem 1rem;flex-wrap:wrap}
 .entry-title{font-weight:800}
 .entry-when{font-family:var(--mono);background:var(--sun);color:#5a4620;border-radius:8px;padding:0 .55rem;font-size:.72rem;font-weight:700;white-space:nowrap}
-@media (prefers-color-scheme: dark){.entry-when{color:#FFE7A8}}
+
 .entry-sub{color:var(--ink-soft);font-size:.92rem;margin:.1rem 0 .4rem;font-weight:700}
 .chips-t{font-family:var(--mono);font-size:.7rem;color:var(--ink-soft);font-weight:700;margin:.5rem 0 .3rem;letter-spacing:.06em}
 .chips{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.4rem}
 .chip{font-family:var(--mono);font-size:.76rem;font-weight:700;padding:.15rem .65rem;border-radius:999px;background:var(--pink);color:#2E2A3B}
 .chip:nth-child(even){background:var(--mint)}
-@media (prefers-color-scheme: dark){.chip{color:#FDEFF5}}
+
 .about{display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:start}
 .postal{width:150px;background:#fff;padding:.5rem .5rem .3rem;border-radius:6px;box-shadow:0 6px 16px rgba(46,42,59,.15);transform:rotate(4deg);text-align:center;position:relative}
 .postal::before{content:"";position:absolute;top:-9px;left:40%;width:46px;height:16px;background:rgba(168,230,218,.85);transform:rotate(-6deg)}
