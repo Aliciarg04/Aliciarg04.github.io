@@ -1,259 +1,34 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>Alicia Ruiz Gómez · CV</title>
-<meta name="description" content="Estudiante del Doble Grado en ADE e Ingeniería Informática (UGR). Desarrolladora web. Granada.">
-<meta name="color-scheme" content="light dark">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --bg: #FFF5F8;
-    --bg-soft: #FDE3EB;
-    --ink: #4A2F3B;
-    --ink-soft: #7C5D6B;
-    --rose: #EBA3B8;
-    --rose-deep: #B84F70;
-    --gold: #B58D62;
-    --line: #F6CBD7;
-    box-sizing: border-box;
-    padding-top: env(safe-area-inset-top, 0px);
-    padding-bottom: env(safe-area-inset-bottom, 0px);
-  }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --bg: #2B1B23;
-      --bg-soft: #3A222D;
-      --ink: #F3E7E4;
-      --ink-soft: #D3B8C3;
-      --rose: #F2A9BC;
-      --rose-deep: #F7BFCE;
-      --gold: #C9A870;
-      --line: #5A3441;
-    }
-  }
-  :root[data-theme="dark"] {
-    --bg: #2B1B23;
-    --bg-soft: #3A222D;
-    --ink: #F3E7E4;
-    --ink-soft: #D3B8C3;
-    --rose: #F2A9BC;
-    --rose-deep: #F7BFCE;
-    --gold: #C9A870;
-    --line: #5A3441;
-  }
-  * { box-sizing: border-box; }
-  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
-  html, body { height: 100%; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--ink);
-    font-family: 'Jost', sans-serif;
-    font-weight: 300;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
-  .wrap {
-    max-width: 620px;
-    margin: 0 auto;
-    padding: 5rem 1.5rem 4rem;
-  }
-  header {
-    margin-bottom: 3.5rem;
-  }
-  h1 {
-    font-family: 'Fraunces', serif;
-    font-weight: 400;
-    font-size: clamp(2.6rem, 8vw, 3.6rem);
-    margin: 0 0 .3rem;
-    color: var(--rose-deep);
-    letter-spacing: -0.01em;
-  }
-  .tagline {
-    font-family: 'Fraunces', serif;
-    font-style: italic;
-    font-weight: 500;
-    font-size: 1.15rem;
-    color: var(--ink-soft);
-    margin: 0 0 1.6rem;
-  }
-  .meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: .4rem 1.2rem;
-    font-size: .92rem;
-    color: var(--ink-soft);
-  }
-  .meta a { color: var(--ink-soft); }
-  .meta span.pending { color: var(--rose); font-style: italic; }
-  a { color: var(--rose-deep); text-decoration: none; border-bottom: 1px solid var(--line); }
-  a:hover { border-color: var(--rose-deep); }
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Alicia Ruiz Gómez · CV</title><meta name="description" content="Estudiante del Doble Grado en ADE e Ingeniería Informática (UGR). Desarrolladora web. Granada."><meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head><body><div class="wrap">
+<nav><a href="index.html" aria-current="page">Inicio</a><a href="proyectos.html">Proyectos</a><a href="blog.html">Blog</a><a href="contacto.html">Contacto</a><a class="pdf" href="CV_Alicia_Ruiz_Gomez.pdf" download>CV en PDF ↓</a></nav>
 
-  section { margin: 3.2rem 0; }
-  section h2 {
-    font-family: 'Fraunces', serif;
-    font-weight: 600;
-    font-size: 1.5rem;
-    color: var(--rose-deep);
-    margin: 0 0 1.1rem;
-    padding-bottom: .55rem;
-    border-bottom: 1px solid var(--line);
-  }
-  p { margin: 0 0 .9rem; max-width: 62ch; }
-  .entry { margin-bottom: 1.6rem; }
-  .entry:last-child { margin-bottom: 0; }
-  .entry-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-  .entry-title { font-weight: 500; color: var(--ink); font-size: 1.02rem; }
-  .entry-when { color: var(--gold); font-size: .85rem; white-space: nowrap; }
-  .entry-sub { color: var(--ink-soft); font-style: italic; font-size: .92rem; margin: .15rem 0 .5rem; }
-  ul { margin: .3rem 0 0; padding-left: 1.1rem; }
-  li { margin-bottom: .4rem; color: var(--ink); }
-  li::marker { color: var(--rose); }
-
-  .grid-two {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem 2.5rem;
-  }
-  .taglist { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .4rem; }
-  .tag {
-    font-size: .82rem;
-    padding: .28rem .75rem;
-    border-radius: 999px;
-    background: var(--bg-soft);
-    color: var(--rose-deep);
-    border: 1px solid var(--line);
-  }
-  .lang-row { display: flex; justify-content: space-between; max-width: 320px; margin-bottom: .5rem; }
-  .lang-row span:last-child { color: var(--ink-soft); }
-
-  footer {
-    margin-top: 4rem;
-    padding-top: 1.6rem;
-    border-top: 1px solid var(--line);
-    color: var(--ink-soft);
-    font-size: .85rem;
-  }
-
-  @media print {
-    :root { --bg: #fff; --bg-soft: #fde9ef; --ink: #2a1f26; --ink-soft: #5a4853; --rose-deep: #B84F70; --line: #f0c9d3; }
-    html, body { height: auto; }
-    .wrap { padding: 0; max-width: none; }
-    section { margin: 1.6rem 0; break-inside: avoid; }
-    header { margin-bottom: 1.8rem; }
-    a { border: 0; }
-    footer { display: none; }
-  }
-
-  @media (max-width: 560px) {
-    .grid-two { grid-template-columns: 1fr; }
-    .wrap { padding-top: 3.5rem; }
-  }
-</style>
-</head>
-<body>
-<div class="wrap">
-
-  <header>
-    <h1>Alicia Ruiz Gómez</h1>
-    <p class="tagline">Estudiante del Doble Grado en Administración de Empresas e Ingeniería Informática</p>
-    <div class="meta">
-      <a href="mailto:aliciaruizgomez14@gmail.com">aliciaruizgomez14@gmail.com</a>
-      <span>Granada, España</span>
-      <a href="https://github.com/Aliciarg04" target="_blank" rel="noopener">github.com/Aliciarg04</a>
-      <a href="https://www.linkedin.com/in/alicia-ruiz-g%C3%B3mez-1591bb43b/" target="_blank" rel="noopener">LinkedIn</a>
-    </div>
-  </header>
-
-  <section id="sobre-mi">
-    <h2>Sobre mí</h2>
-    <p>Combino la visión de negocio del Grado en Administración de Empresas con la capacidad técnica de la Ingeniería Informática. Me caracteriza asumir proyectos de principio a fin y aprender de forma autónoma lo necesario para completarlos.</p>
-  </section>
-
-  <section id="formacion">
-    <h2>Formación</h2>
-    <div class="entry">
-      <div class="entry-head">
-        <span class="entry-title">Doble Grado en ADE e Ingeniería Informática</span>
-        <span class="entry-when">5º curso</span>
-      </div>
-      <p class="entry-sub">Universidad de Granada · finalización prevista tras el próximo curso</p>
-      <p>Formación que une gestión empresarial y desarrollo de software, con asignaturas de programación, bases de datos, economía y gestión de proyectos.</p>
-    </div>
-    <div class="entry">
-      <div class="entry-head">
-        <span class="entry-title">Bachillerato de Ciencias Sociales</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="experiencia">
-    <h2>Experiencia</h2>
-    <div class="entry">
-      <div class="entry-head">
-        <span class="entry-title">Desarrolladora web — 934 Academy</span>
-        <span class="entry-when">2025 — actualidad</span>
-      </div>
-      <p class="entry-sub">Plataforma online de ejercicios para una academia de idiomas</p>
-      <ul>
-        <li>Diseñé y desarrollé la plataforma completa en solitario, compaginándolo con mis estudios.</li>
-        <li>Me encargo de todo el ciclo: interfaz, lógica de la aplicación, base de datos y despliegue.</li>
-        <li>Stack: JavaScript, HTML y CSS, con base de datos en Supabase.</li>
-        <li>Proyecto en uso y en desarrollo continuo desde 2025.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="proyectos">
-    <h2>Proyectos</h2>
-    <div class="entry">
-      <div class="entry-head">
-        <span class="entry-title">ABM ANISI · Economía Mundial</span>
-        <span class="entry-when">trabajo universitario</span>
-      </div>
-      <p class="entry-sub">Trabajo en grupo de la asignatura de Economía Mundial · <a href="https://github.com/Aliciarg04/abm-anisi-spain" target="_blank" rel="noopener">repositorio en GitHub</a></p>
-      <p>Modelo basado en agentes (ABM) en Python que simula la interacción entre Administración Pública, empresas y trabajadores, incluyendo el trabajo doméstico. Calibrado para replicar indicadores macroeconómicos de España en 2024, con artículo académico redactado en LaTeX.</p>
-    </div>
-  </section>
-
-  <section id="detalle">
-    <div class="grid-two">
-      <div>
-        <h2>Habilidades técnicas</h2>
-        <div class="taglist">
-          <span class="tag">JavaScript</span>
-          <span class="tag">Python</span>
-          <span class="tag">HTML &amp; CSS</span>
-          <span class="tag">Supabase</span>
-          <span class="tag">SQL</span>
-          <span class="tag">C / C++</span>
-          <span class="tag">LaTeX</span>
-          <span class="tag">Ofimática</span>
-        </div>
-      </div>
-      <div>
-        <h2>Idiomas</h2>
-        <div class="lang-row"><span>Español</span><span>Nativo</span></div>
-        <div class="lang-row"><span>Inglés</span><span>C1 · Cambridge</span></div>
-        <div class="lang-row"><span>Alemán</span><span>A2 · Bachillerato</span></div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    Alicia Ruiz Gómez · Granada, España
-  </footer>
-
-</div>
-</body>
-</html>
+<header><h1>Alicia Ruiz Gómez</h1>
+<p class="tagline">Estudiante del Doble Grado en Administración de Empresas e Ingeniería Informática</p>
+<div class="meta"><a href="mailto:aliciaruizgomez14@gmail.com">aliciaruizgomez14@gmail.com</a><span>Granada, España</span>
+<a href="https://github.com/Aliciarg04" target="_blank" rel="noopener">github.com/Aliciarg04</a>
+<a href="https://www.linkedin.com/in/alicia-ruiz-g%C3%B3mez-1591bb43b/" target="_blank" rel="noopener">LinkedIn</a></div></header>
+<section><h2>Sobre mí</h2><p>Combino la visión de negocio del Grado en Administración de Empresas con la capacidad técnica de la Ingeniería Informática. Me caracteriza asumir proyectos de principio a fin y aprender de forma autónoma lo necesario para completarlos.</p></section>
+<section><h2>Formación</h2>
+<div class="entry"><div class="entry-head"><span class="entry-title">Doble Grado en ADE e Ingeniería Informática</span><span class="entry-when">5º curso</span></div>
+<p class="entry-sub">Universidad de Granada · finalización prevista tras el próximo curso</p>
+<p>Formación que une gestión empresarial y desarrollo de software, con asignaturas de programación, bases de datos, economía y gestión de proyectos.</p></div>
+<div class="entry"><div class="entry-head"><span class="entry-title">Bachillerato de Ciencias Sociales</span></div></div></section>
+<section><h2>Experiencia</h2>
+<div class="entry"><div class="entry-head"><span class="entry-title">Desarrolladora web — 934 Academy</span><span class="entry-when">2025 — actualidad</span></div>
+<p class="entry-sub">Plataforma online de ejercicios para una academia de idiomas</p>
+<ul><li>Diseñé y desarrollé la plataforma completa en solitario, compaginándolo con mis estudios.</li>
+<li>Me encargo de todo el ciclo: interfaz, lógica de la aplicación, base de datos y despliegue.</li>
+<li>Stack: JavaScript, HTML y CSS, con base de datos en Supabase.</li>
+<li>Proyecto en uso y en desarrollo continuo desde 2025.</li></ul></div></section>
+<section><h2>Proyectos</h2>
+<div class="entry"><div class="entry-head"><span class="entry-title">ABM ANISI · Economía Mundial</span><span class="entry-when">trabajo universitario</span></div>
+<p class="entry-sub">Trabajo en grupo de la asignatura de Economía Mundial</p>
+<p>Modelo basado en agentes (ABM) en Python que simula la interacción entre Administración Pública, empresas y trabajadores, incluyendo el trabajo doméstico. Calibrado para replicar indicadores macroeconómicos de España en 2024, con artículo académico redactado en LaTeX.</p>
+<p class="note"><a href="proyectos.html">Ver más detalle de mis proyectos →</a></p></div></section>
+<section><div class="grid-two"><div><h2>Habilidades técnicas</h2><div class="taglist">
+<span class="tag">JavaScript</span><span class="tag">Python</span><span class="tag">HTML &amp; CSS</span><span class="tag">Supabase</span><span class="tag">SQL</span><span class="tag">C / C++</span><span class="tag">LaTeX</span><span class="tag">Ofimática</span></div></div>
+<div><h2>Idiomas</h2><div class="lang-row"><span>Español</span><span>Nativo</span></div><div class="lang-row"><span>Inglés</span><span>C1 · Cambridge</span></div><div class="lang-row"><span>Alemán</span><span>A2 · Bachillerato</span></div></div></div></section>
+<p><a class="btn" href="CV_Alicia_Ruiz_Gomez.pdf" download>Descargar CV en PDF</a></p>
+<footer>Alicia Ruiz Gómez · Granada, España</footer></div></body></html>

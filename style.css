@@ -1,0 +1,56 @@
+:root {
+  --bg:#FFF5F8; --bg-soft:#FDE3EB; --ink:#4A2F3B; --ink-soft:#7C5D6B;
+  --rose:#EBA3B8; --rose-deep:#B84F70; --gold:#B58D62; --line:#F6CBD7;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#2B1B23; --bg-soft:#3A222D; --ink:#F3E7E4; --ink-soft:#D3B8C3; --rose:#F2A9BC; --rose-deep:#F7BFCE; --gold:#C9A870; --line:#5A3441; }
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Jost',sans-serif;font-weight:300;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:620px;margin:0 auto;padding:2.5rem 1.5rem 4rem}
+a{color:var(--rose-deep);text-decoration:none;border-bottom:1px solid var(--line)}
+a:hover{border-color:var(--rose-deep)}
+nav{display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;font-size:.92rem;margin-bottom:3rem;padding-bottom:.9rem;border-bottom:1px solid var(--line)}
+nav a{border:0;color:var(--ink-soft)}
+nav a[aria-current="page"]{color:var(--rose-deep);font-weight:500}
+nav a.pdf{margin-left:auto}
+h1{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(2.4rem,8vw,3.4rem);margin:0 0 .3rem;color:var(--rose-deep);letter-spacing:-.01em}
+.tagline{font-family:'Fraunces',serif;font-style:italic;font-weight:500;font-size:1.15rem;color:var(--ink-soft);margin:0 0 1.6rem}
+.meta{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;font-size:.92rem;color:var(--ink-soft)}
+.meta a{color:var(--ink-soft)}
+header{margin-bottom:3rem}
+section{margin:3rem 0}
+h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;color:var(--rose-deep);margin:0 0 1.1rem;padding-bottom:.55rem;border-bottom:1px solid var(--line)}
+h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.2rem;color:var(--ink);margin:1.6rem 0 .4rem}
+p{margin:0 0 .9rem;max-width:62ch}
+ul{margin:.3rem 0 1rem;padding-left:1.1rem} li{margin-bottom:.4rem} li::marker{color:var(--rose)}
+.entry{margin-bottom:1.6rem}
+.entry-head{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap}
+.entry-title{font-weight:500;color:var(--ink);font-size:1.02rem}
+.entry-when{color:var(--gold);font-size:.85rem;white-space:nowrap}
+.entry-sub{color:var(--ink-soft);font-style:italic;font-size:.92rem;margin:.15rem 0 .5rem}
+.grid-two{display:grid;grid-template-columns:1fr 1fr;gap:2rem 2.5rem}
+.taglist{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.4rem}
+.tag{font-size:.82rem;padding:.28rem .75rem;border-radius:999px;background:var(--bg-soft);color:var(--rose-deep);border:1px solid var(--line)}
+.lang-row{display:flex;justify-content:space-between;max-width:320px;margin-bottom:.5rem}
+.lang-row span:last-child{color:var(--ink-soft)}
+.btn{display:inline-block;padding:.5rem 1.1rem;border-radius:999px;background:var(--rose-deep);color:var(--bg);border:0;font-weight:400}
+.btn:hover{opacity:.9}
+.card{padding:1.3rem 1.4rem;border:1px solid var(--line);border-radius:14px;background:var(--bg-soft);margin-bottom:1.4rem}
+.card h3{margin-top:0}
+.card dl{margin:.8rem 0 0;display:grid;grid-template-columns:max-content 1fr;gap:.35rem 1rem;font-size:.92rem}
+.card dt{color:var(--gold)} .card dd{margin:0}
+.posts{list-style:none;padding:0} .posts li{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding:.8rem 0;border-bottom:1px solid var(--line);margin:0}
+.posts .date{color:var(--gold);font-size:.85rem}
+.note{color:var(--ink-soft);font-size:.9rem}
+footer{margin-top:4rem;padding-top:1.6rem;border-top:1px solid var(--line);color:var(--ink-soft);font-size:.85rem}
+@media print{
+  :root{--bg:#fff;--bg-soft:#fde9ef;--ink:#2a1f26;--ink-soft:#5a4853;--rose-deep:#B84F70;--line:#f0c9d3}
+  html{font-size:13px} .wrap{padding:0;max-width:none} nav,footer,.btn,.note a{display:none} a{border:0}
+  header{margin-bottom:1.2rem} h1{font-size:2.3rem} .tagline{margin-bottom:.8rem;font-size:1rem}
+  section{margin:1.1rem 0;break-inside:avoid} h2{font-size:1.15rem;margin-bottom:.6rem;padding-bottom:.3rem}
+  p{margin-bottom:.5rem} .entry{margin-bottom:.9rem} li{margin-bottom:.2rem}
+}
+@media(max-width:560px){.grid-two{grid-template-columns:1fr}.wrap{padding-top:1.8rem}nav a.pdf{margin-left:0}}
